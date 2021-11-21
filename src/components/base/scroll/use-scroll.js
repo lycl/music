@@ -19,4 +19,5 @@ export default function useScroll(wrapperRef, options, emit) {
     onUnmounted(() => {
         scroll.value.destroy()
     })
+    return scroll
 }

@@ -29,7 +29,7 @@ export default function useFixed(props) {
         for (let i = 0; i < listHeightsVal.length - 1; i++) {
             const heightTop = listHeightsVal[i]
             const heightBottom = listHeightsVal[i + 1]
-            if (newY >= heightTop && newY <= heightBottom) {
+            if (newY >= heightTop && newY < heightBottom) {
                 currentIndex.value = i
                 distance.value = heightBottom - newY
                 break
@@ -54,6 +54,7 @@ export default function useFixed(props) {
         groupRef,
         onScroll,
         fixedTitle,
-        fixedStyle
+        fixedStyle,
+        currentIndex
     }
 }
